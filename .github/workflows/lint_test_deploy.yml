@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v3
+      - name: install vitest
+        run: npm install -D vitest
       - name: test_code
         run: npm run test
   deploy:
