@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: actions/checkout
+        uses: actions/checkout@v3
       - name: lint_code
         run: npm lint
   test:
@@ -13,7 +13,7 @@ jobs:
     needs: lint
     steps:
       - name: Get code
-        uses: actions/checkout
+        uses: actions/checkout@v3
       - name: test_code
         run: npm test
   deploy:
@@ -21,6 +21,6 @@ jobs:
     needs: [lint, test]
     steps:
       - name: Get code
-        uses: actions/checkout
+        uses: actions/checkout@v3
       - name: deploy
         run: echo "Deploying..."
